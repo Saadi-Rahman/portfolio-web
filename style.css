@@ -278,6 +278,7 @@ p {
 .cta {
   background: white;
   border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   text-align: center;
   padding: 100px 20px;
   margin-bottom: 80px;
@@ -294,6 +295,7 @@ p {
 
 footer {
   background: #222;
+  border-radius: 20px 20px 0 0;
   color: white;
   padding: 70px 0;
 }
@@ -336,14 +338,34 @@ footer {
   color: #6246ea;
 }
 
+.blur-line {
+  height: 2px;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  margin: 40px auto 0;
+}
+
 .footer-bottom {
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-around;
   color: #a8a8a8;
 }
 
-.footer-nav a {
+.footer-bottom p {
+  padding-top: 0px;
+}
+
+.nav-links-bottom {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links-bottom a {
+  text-decoration: none;
   color: #a8a8a8;
 }
 
@@ -621,7 +643,19 @@ footer {
     max-width: 100%;
   }
 
+  .blur-line {
+    width: 90%;
+  }
+
   .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    color: #a8a8a8;
+  }
+
+  .footer-bottom p {
+    margin-top: 20px;
   }
 }
